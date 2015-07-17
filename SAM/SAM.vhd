@@ -65,7 +65,7 @@ end component;
 component ALU is
     Port ( clk_in : in  STD_LOGIC;
 			  enable_in : in  STD_LOGIC;
-           selector_in : in  STD_LOGIC;
+           selector_in : in  STD_LOGIC_VECTOR (2 downto 0);
            x_in : in  STD_LOGIC_VECTOR (7 downto 0);
            y_in : in  STD_LOGIC_VECTOR (7 downto 0);
            s_out : out  STD_LOGIC_VECTOR (7 downto 0);
@@ -78,7 +78,7 @@ component UDOchip is
     Port ( s_in : in  STD_LOGIC_VECTOR (7 downto 0);
 			  enable_in : in  STD_LOGIC;
 			  enable_out : out  STD_LOGIC;
-           s_out : out  STD_LOGIC);
+           s_out : out  STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
 component SAMmux is
@@ -109,7 +109,7 @@ signal udo_enabler: std_logic:='0';
 
 signal counter_enabler: std_logic:='0';
 
-signal udo_to_alu: std_logic;
+signal udo_to_alu: STD_LOGIC_VECTOR (2 downto 0);
 
 signal SAMmux_to_udo: STD_LOGIC_VECTOR (7 downto 0);
 

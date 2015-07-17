@@ -33,19 +33,19 @@ entity UDOchip is
     Port ( s_in : in  STD_LOGIC_VECTOR (7 downto 0);
 			  enable_in : in  STD_LOGIC;
 			  enable_out : out  STD_LOGIC;
-           s_out : out  STD_LOGIC);
+           s_out : out  STD_LOGIC_VECTOR (2 downto 0));
 end UDOchip;
 
 architecture Behavioral of UDOchip is
 
-signal op1: std_logic:= '0';
-signal op2: std_logic:= '0';
-signal op3: std_logic:= '0';
-signal op4: std_logic:= '0';
-signal op5: std_logic:= '1';
-signal op6: std_logic:= '0';
-signal op7: std_logic:= '0';
-signal op8: std_logic:= '1';
+signal op1: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op2: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op3: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op4: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op5: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op6: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op7: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op8: STD_LOGIC_VECTOR (2 downto 0):= "010";
 
 begin
 

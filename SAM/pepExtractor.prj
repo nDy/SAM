@@ -1,1 +1,6 @@
-work	"UDOchip.vhd"
+work	"ALU.vhd"
+work	"ALUmux.vhd"
+work	"Comp1.vhd"
+work	"FullAdder.vhd"
+work	"FullAdder8b.vhd"
+work	"Selector.vhd"

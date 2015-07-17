@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2015-07-13T02:29:25</DateModified>
+  <DateModified>2015-07-17T17:21:15</DateModified>
   <ModuleName>SAM</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/nDy/Desktop/nDy/SAM/iseconfig/SAM.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/nDy/Desktop/nDy/SAM\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/nDy/Documents/GitHub/SAM/SAM/iseconfig/SAM.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/nDy/Documents/GitHub/SAM/SAM\</ImplementationReportsDirectory>
   <DateInitialized>2015-07-13T02:27:57</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

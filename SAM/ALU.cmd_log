@@ -1,0 +1,3 @@
+vhdtdtfi -lib work FullAdder.vhd -lib work Selector.vhd -lib work FullAdder8b.vhd -lib work Comp1.vhd -lib work ALUmux.vhd -lib work ALU.vhd -prj SAM -o ALU.spl -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e ALU.spl C:/Users/nDy/Documents/GitHub/SAM/SAM/ALU.sym 
+vhdtdtfi -prj SAM -o C:/Users/nDy/Documents/GitHub/SAM/SAM/ALU.vhi -module ALU -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work FullAdder.vhd -lib work Selector.vhd -lib work FullAdder8b.vhd -lib work Comp1.vhd -lib work ALUmux.vhd -lib work ALU.vhd 
