@@ -1,0 +1,3 @@
+vhdtdtfi -lib work UDOchip.vhd -prj SAM -o UDOchip.spl -module UDOchip -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e UDOchip.spl C:/Users/nDy/Desktop/nDy/SAM/UDOchip.sym 
+vhdtdtfi -prj SAM -o C:/Users/nDy/Desktop/nDy/SAM/UDOchip.vhi -module UDOchip -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work UDOchip.vhd 

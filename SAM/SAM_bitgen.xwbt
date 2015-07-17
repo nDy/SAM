@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\nDy\Desktop\nDy\SAM\SAM.ncd
+OUTFILE=C:\Users\nDy\Desktop\nDy\SAM\SAM.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\nDy\Desktop\nDy\SAM
+LICENSE=WebPack
+USER_INFO=211046927_0_0_375
