@@ -95,9 +95,9 @@ component Counter is
            s_out : out  STD_LOGIC_VECTOR (2 downto 0));
 end component;
 
-signal databus: std_logic_vector(7 downto 0):= "00000000";
+signal databus: std_logic_vector(7 downto 0);
 
-signal seed: std_logic_vector(7 downto 0):= "00000001";
+signal seed: std_logic_vector(7 downto 0):= "00000010";
 
 signal display_enabler: std_logic;
 
@@ -119,7 +119,18 @@ signal timer : integer range 0 to 75000000 := 0;
 
 begin
 
+ALU_unit: ALU port map(
 
+clk_in => clk_in,
+enable_in => alu_enabler,
+x_in => databus,
+y_in => seed,
+selector_in => udo_to_alu,
+enable_out => display_enabler,
+s_out => databus,
+overflow_out=> overflow_out
+
+);
 
 lcd0: lcd port map(
 
@@ -133,19 +144,6 @@ LCD_RS => lcd_rs_out,
 LCD_RW => lcd_rw_out,
 SF_CE0 => sf_ce0_out,
 SF_D => sf_d_out
-
-);
-
-ALU_unit: ALU port map(
-
-clk_in => clk_in,
-enable_in => alu_enabler,
-x_in => databus,
-y_in => seed,
-selector_in => udo_to_alu,
-enable_out => display_enabler,
-s_out => databus,
-overflow_out=> overflow_out
 
 );
 

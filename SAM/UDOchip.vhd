@@ -38,14 +38,14 @@ end UDOchip;
 
 architecture Behavioral of UDOchip is
 
-signal op1: STD_LOGIC_VECTOR (2 downto 0):= "010";
-signal op2: STD_LOGIC_VECTOR (2 downto 0):= "010";
-signal op3: STD_LOGIC_VECTOR (2 downto 0):= "010";
-signal op4: STD_LOGIC_VECTOR (2 downto 0):= "010";
-signal op5: STD_LOGIC_VECTOR (2 downto 0):= "010";
-signal op6: STD_LOGIC_VECTOR (2 downto 0):= "010";
-signal op7: STD_LOGIC_VECTOR (2 downto 0):= "010";
-signal op8: STD_LOGIC_VECTOR (2 downto 0):= "010";
+signal op1: STD_LOGIC_VECTOR (2 downto 0):= "001";
+signal op2: STD_LOGIC_VECTOR (2 downto 0):= "001";
+signal op3: STD_LOGIC_VECTOR (2 downto 0):= "001";
+signal op4: STD_LOGIC_VECTOR (2 downto 0):= "100";
+signal op5: STD_LOGIC_VECTOR (2 downto 0):= "001";
+signal op6: STD_LOGIC_VECTOR (2 downto 0):= "001";
+signal op7: STD_LOGIC_VECTOR (2 downto 0):= "100";
+signal op8: STD_LOGIC_VECTOR (2 downto 0):= "001";
 
 begin
 

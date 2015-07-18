@@ -78,6 +78,14 @@ Port (
 	 s_out : out  STD_LOGIC_VECTOR (7 downto 0));
 end component;
 
+component Booth is
+        port(x, y: in std_logic_vector(7 downto 0);
+		  			  clk_in : in  std_logic;
+				 enable_in: in std_logic;
+				 enable_out: out std_logic;
+             O: out std_logic_vector(15 downto 0));
+end component;
+
 signal comp_to_mux: STD_LOGIC_VECTOR (7 downto 0);
 signal mux_to_fa: STD_LOGIC_VECTOR (7 downto 0);
 signal add_to_sel: STD_LOGIC;
@@ -85,7 +93,7 @@ signal sub_to_sel: STD_LOGIC;
 signal mult_to_sel: STD_LOGIC:='0';
 signal add_data_to_sel: STD_LOGIC_VECTOR (7 downto 0);
 signal sub_data_to_sel: STD_LOGIC_VECTOR (7 downto 0);
-signal mult_data_to_sel: STD_LOGIC_VECTOR (7 downto 0):="00000000";
+signal mult_data_to_sel: STD_LOGIC_VECTOR (7 downto 0);
 
 begin
 
@@ -125,6 +133,16 @@ c_in => selector_in(1),
 c_out => open,
 s_out => sub_data_to_sel,
 enable_out => sub_to_sel
+);
+
+mult: Booth port map(
+x=> x_in, 
+y=> y_in,
+		  			  clk_in=> clk_in,
+				 enable_in=>selector_in(2),
+				 enable_out=> mult_to_sel,
+             O(7 downto 0)=>mult_data_to_sel,
+				 O(15 downto 8)=> open
 );
 
 ALU_selector: Selector port map(
